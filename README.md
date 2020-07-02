@@ -13,4 +13,5 @@ Save or update action triggers Github repository_dispatch action for triggering 
 ### Additional documentation
 
 https://github.com/rgdiascardoso/github-actions-manual-trigger
+
 https://goobar.io/2019/12/07/manually-trigger-a-github-actions-workflow/
