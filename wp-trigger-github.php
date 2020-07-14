@@ -23,6 +23,7 @@ class WPTriggerGithub
   function __construct()
   {
     add_action('admin_init', array($this, 'general_settings_section'));
+    // add_action('save_post', array($this, 'run_hook'), 10, 3);
     add_action('wp_dashboard_setup', array($this, 'build_dashboard_widget'));
     add_action('admin_bar_menu', array($this, 'adminBarTriggerButton'));
     add_action('admin_footer', array($this, 'adminBarCssAndJs'));
