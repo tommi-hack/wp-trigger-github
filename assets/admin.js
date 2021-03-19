@@ -31,11 +31,11 @@
             xhr.setRequestHeader('Content-Type', 'application/json');
           },
           success: function (e) {
-            alert('Deployment successfully started! This can take up to 5 minutes.');
+            alert('Deployment successfully started! This can take several minutes.');
             updateBadgeUrl();
           },
           error: function(jqXHR, textStatus, errorThrown) {
-            alert('An ERROR occured during deployment. Please get in touch with Riccardo.');
+            alert('An ERROR occurred during deployment. Please get in touch with the administrator.');
             console.error(jqXHR, textStatus, errorThrown);
           }
         });
