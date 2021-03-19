@@ -25,7 +25,7 @@ class WPTriggerGithub
     add_action('admin_init', array($this, 'general_settings_section'));
     // add_action('save_post', array($this, 'run_hook'), 10, 3);
     add_action('wp_dashboard_setup', array($this, 'build_dashboard_widget'));
-    add_action('admin_bar_menu', array($this, 'adminBarBadge'));
+    //add_action('admin_bar_menu', array($this, 'adminBarBadge'));
     add_action('admin_bar_menu', array($this, 'adminBarTriggerButton'));
     add_action('admin_footer', array($this, 'adminBarCssAndJs'));
     add_action('wp_footer', array($this, 'adminBarCssAndJs'));
@@ -177,19 +177,19 @@ class WPTriggerGithub
     echo $markup;
   }
 
-  function adminBarBadge($bar)
-    {
-      $github_badge = get_option('option_badge');
-      $bar->add_node([
-        'id' => 'wp-trigger-github-badge',
-        'title' => 'Check deploy status',
-        'parent' => 'top-secondary',
-        'href' => $github_badge,
-        'meta' => [
-          'target' => '_blank'
-        ]
-    ]);
-  }
+//   function adminBarBadge($bar)
+//     {
+//       $github_badge = get_option('option_badge');
+//       $bar->add_node([
+//         'id' => 'wp-trigger-github-badge',
+//         'title' => 'Check deploy status',
+//         'parent' => 'top-secondary',
+//         'href' => $github_badge,
+//         'meta' => [
+//           'target' => '_blank'
+//         ]
+//     ]);
+//   }
 
   function adminBarTriggerButton($bar)
   {
